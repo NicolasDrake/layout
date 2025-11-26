@@ -1,27 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css'
-
-import Home from './componentes/pages/Home'
-import Empresa from './componentes/pages/Empresa.jsx'
-import Contato from './componentes/pages/Contato.jsx';
-
-import Navbar from './componentes/Layout/Navbar.jsx';
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/pages/Home.jsx';
+import Empresa from './components/pages/Empresa.jsx';
+import Contato from './components/pages/Contato.jsx';
+import Navbar from './components/layout/Navbar.jsx';
+import Footer from './components/layout/Footer.jsx';
 
 function App() {
-
   return (
-    <Router>
-      <Routes>
-
-        <Route path="/" element={<><Navbar /><Home /></>} />
-        <Route path="/home" element={<><Navbar /><Home /></>} />
-        <Route path="/empresa" element={<><Navbar /><Empresa /></>}/>
-        <Route path="/Contato" element={<><Navbar /><Contato /></>}/>
-
-      </Routes>
-    </Router>
-  )
+    <div className="App">
+      <Navbar />
+      <div className="content">
+        <div className="page-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/empresa" element={<Empresa />} />
+            <Route path="/contato" element={<Contato />} />
+          </Routes>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,32 @@
+.nav {
+    background-color: #121212;
+    padding: 2.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .list {
+    list-style: none;
+    display: flex;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+  }
+  
+  .item a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+  
+  .item a:hover {
+    background-color: #5858ff;
+  }
